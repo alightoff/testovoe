@@ -1,0 +1,153 @@
+.container {
+  max-width: 1358px;
+  margin: 0 auto;
+}
+
+.header {
+  max-height: 256px;
+}
+
+.header__img {
+  width: 100%;
+  min-width: 311px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: clamp(-1.875rem, -0.897rem + -4.35vw, -4.375rem);
+  padding: 0 150px;
+}
+
+.profile__info {
+  display: flex;
+  align-items: end;
+  min-width: 116px;
+}
+
+.profile__info-name {
+  font-size: clamp(0.938rem, 0.717rem + 0.98vw, 1.5rem);
+  margin-bottom: 3px;
+}
+
+.profile__info-avatar {
+  max-width: clamp(3.125rem, 1.458rem + 8.33vw, 8.125rem);
+  width: 100%;
+  padding-right: 20px;
+}
+
+.profile__interaction-btn {
+  padding: 10px 15px 10px 35px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+
+.profile__interaction-btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.profile__interaction-btn::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.message-btn::before {
+  background-image: url('../../img/icons/Mail.svg');
+}
+
+.call-btn::before {
+  background-image: url('../../img/icons/Phone.svg');
+}
+
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(12.5rem, -5.769rem + 38.46vw, 25rem), 1fr));
+  grid-gap: 20px;
+  max-width: 1350px;
+  margin: 100px auto;
+  padding: 50px;
+  padding-top: 0;
+}
+
+.images__item {
+  text-align: left;
+ 
+}
+
+.images__item-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.images__item-text {
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 967px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 150px;
+  }
+
+  .profile__info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .profile__info-avatar {
+    padding: 0;
+  }
+
+  .images {
+    margin: 100px auto;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .profile__info {
+    margin-bottom: 5px;
+  }
+
+  .profile__interaction-btn {
+    transform: scale(0.8);
+  }
+
+  .profile__interaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .profile__interaction-btn:not(:last-child) {
+    margin: 0;
+  }
+
+  .images {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .profile__info {
+    max-width: 116px;
+    width: 100%;
+  }
+}

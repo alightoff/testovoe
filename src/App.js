@@ -1,10 +1,11 @@
-import "./app.css"
-import PhotoGallery from "./PhotoGallery"
+import Profile from "./components/Profile/Profile"
+
+// import "./app.css"
 
 function App() {
   return (
     <div className="App">
-      <PhotoGallery />
+      <Profile />
     </div>
   )
 }
