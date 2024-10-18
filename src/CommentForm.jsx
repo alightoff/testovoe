@@ -26,7 +26,7 @@ export default function CommentForm({imageId, onAddComment, onClose}) {
         <form onSubmit={handleSubmit} className="comment-form">
             <h2 className="comment-label">Comment</h2>
             <textarea value={comment} onChange={(e) => setComment(e.target.value)} placeholder="Введите комментарий"></textarea>
-            <button onClick={onClose} type="submit">Сохранить</button>
+            <button type="submit">Сохранить</button>
         </form>
     </>
   );
